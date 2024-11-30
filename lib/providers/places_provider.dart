@@ -5,12 +5,13 @@ import 'dart:io';
 class PlacesProvider extends StateNotifier<List<Place>> {
   PlacesProvider() : super([]);
 
-  void addPlace(String title, File image) {
+  void addPlace(String title, File image, PlaceLocation location) {
     state = [
       ...state,
       Place(
         title: title,
         image: image,
+        location: location,
       ),
     ];
   }
